@@ -1,0 +1,11 @@
+{
+	"editor.detectIndentation": false,
+	"editor.formatOnSave": true,
+	"editor.insertSpaces": false,
+	"editor.rulers": [
+		90
+	],
+	"editor.tabSize": 2,
+	"evenBetterToml.formatter.columnWidth": 90,
+	"yaml.format.printWidth": 90
+}
