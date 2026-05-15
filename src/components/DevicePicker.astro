@@ -1,0 +1,29 @@
+---
+import { parse } from "yaml";
+import type { Config } from "../types/Config";
+import configFile from "../../config.yml?raw";
+
+const config = parse(configFile) as Config;
+---
+
+<fieldset class="fieldset">
+	<legend class="fieldset-legend">Devices</legend>
+	<div class="flex">
+		{
+			config.devices.map((device) => (
+				<div class="tooltip tooltip-bottom grow flex">
+					<div class="tooltip-content">
+						<code>{device.address}</code>
+					</div>
+					<input
+						type="checkbox"
+						name="device-buttons"
+						class="btn m-1 grow"
+						aria-label={device.name}
+						value={device.name}
+					/>
+				</div>
+			))
+		}
+	</div>
+</fieldset>

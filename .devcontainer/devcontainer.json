@@ -1,8 +1,21 @@
 {
-	"name": "Rust",
-	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/rust:2-1-trixie",
+	"name": "Rust, Bun",
+	"dockerFile": "Dockerfile",
 	"features": {
 		"ghcr.io/postfinance/devcontainer-features/docker-out:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"astro-build.astro-vscode",
+				"bruno-api-client.bruno",
+				"github.vscode-github-actions",
+				"oven.bun-vscode",
+				"oxc.oxc-vscode",
+				"rust-lang.rust-analyzer",
+				"ms-azuretools.vscode-containers",
+				"tamasfe.even-better-toml"
+			]
+		}
 	}
 }

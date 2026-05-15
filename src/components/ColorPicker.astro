@@ -1,0 +1,23 @@
+<script>
+	import "@melloware/coloris/dist/coloris.css";
+	import Coloris from "@melloware/coloris";
+
+	Coloris.init();
+	Coloris({
+		parent: "#color",
+		el: "#color",
+		alpha: false,
+		theme: "pill",
+		themeMode: "auto",
+		inline: true,
+		defaultColor: "#FFFFFF",
+		wrap: false,
+	});
+</script>
+
+<fieldset class="fieldset">
+	<legend class="fieldset-legend">Color</legend>
+	<!-- <input type="text" name="color" id="color" /> -->
+	<div id="color" class="m-2"></div>
+	<button type="button" class="btn">Set</button>
+</fieldset>

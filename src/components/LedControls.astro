@@ -1,0 +1,22 @@
+---
+import DevicePicker from "./DevicePicker.astro";
+import PowerButtons from "./PowerButtons.astro";
+import ColorPicker from "./ColorPicker.astro";
+import BrightnessSlider from "./BrightnessSlider.astro";
+---
+
+<section class="hero bg-base-300 min-h-screen">
+	<div class="hero-content">
+		<div class="card bg-base-100 shadow-2xl">
+			<div class="card-body">
+				<DevicePicker />
+				<PowerButtons />
+				<fieldset class="fieldset">
+					<ColorPicker />
+					<BrightnessSlider />
+					<button type="button" class="btn">Set Color &amp; Brightness</button>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+</section>

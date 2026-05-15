@@ -1,0 +1,21 @@
+{
+	"arrowParens": "avoid",
+	"bracketSameLine": true,
+	"endOfLine": "lf",
+	"ignorePatterns": ["dist*/**", "gen/**", "target/**"],
+	"jsdoc": true,
+	"jsxSingleQuote": true,
+	"printWidth": 90,
+	"proseWrap": "always",
+	"singleQuote": true,
+	"sortPackageJson": false,
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": ["*.css"],
+			"options": {
+				"singleQuote": false
+			}
+		}
+	]
+}
