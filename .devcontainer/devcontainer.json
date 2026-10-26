@@ -1,8 +1,23 @@
 {
-	"name": "Rust",
+	"name": "elk-bledom-api",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"image": "mcr.microsoft.com/devcontainers/rust:2-1-trixie",
 	"features": {
-		"ghcr.io/postfinance/devcontainer-features/docker-out:1": {}
+		"ghcr.io/devcontainers-community/npm-features/prettier:1": {},
+		"ghcr.io/lee-orr/rusty-dev-containers/bacon:0": {},
+		"ghcr.io/postfinance/devcontainer-features/docker-out:1.1.0": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode",
+				"rust-lang.rust-analyzer",
+				"vadimcn.vscode-lldb",
+				"ms-azuretools.vscode-containers",
+				"42Crunch.vscode-openapi",
+				"redhat.vscode-yaml",
+				"tombi-toml.tombi"
+			]
+		}
 	}
 }

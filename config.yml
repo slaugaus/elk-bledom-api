@@ -1,0 +1,17 @@
+server:
+  port: 18080
+
+bluetooth:
+  adapter: hci0
+
+# TODO: make this "hot reloadable" - reread on every api hit?
+# TODO: can faff about with toolBLEx to mess with the strips
+devices:
+  - name: Left Desk
+    address: BE:68:9D:08:20:18
+    handle: 0x0003
+    order: GRB # necessary????
+  - name: Right Desk
+    address: BE:67:00:9B:4E:7C
+    handle: 0x0007 # probably the right handle but doesn't work
+    order: GRB

@@ -1,0 +1,11 @@
+bracketSameLine = true
+printWidth = 90
+proseWrap = "always"
+singleQuote = false
+trailingComma = "es5"
+useTabs = true
+
+# Fix "<!DOCTYPE html>" getting removed
+[[overrides]]
+files = "*.hbs"
+options = { parser = "html" }

@@ -1,0 +1,27 @@
+{
+  "features": {
+    "ghcr.io/devcontainers-community/npm-features/prettier:1": {
+      "version": "1.1.0",
+      "resolved": "ghcr.io/devcontainers-community/npm-features/prettier@sha256:41aca434d43373d78b276d3cd89ecdce960e0b618ff0ee59f2ecee0810dbabe9",
+      "integrity": "sha256:41aca434d43373d78b276d3cd89ecdce960e0b618ff0ee59f2ecee0810dbabe9",
+      "dependsOn": [
+        "ghcr.io/devcontainers/features/node"
+      ]
+    },
+    "ghcr.io/devcontainers/features/node": {
+      "version": "2.0.0",
+      "resolved": "ghcr.io/devcontainers/features/node@sha256:fedd4c11f7adfb64283b578dddc7da906728daa25fa293351c9d913231acf12f",
+      "integrity": "sha256:fedd4c11f7adfb64283b578dddc7da906728daa25fa293351c9d913231acf12f"
+    },
+    "ghcr.io/lee-orr/rusty-dev-containers/bacon:0": {
+      "version": "0.1.8",
+      "resolved": "ghcr.io/lee-orr/rusty-dev-containers/bacon@sha256:30c095906e92e601f18027a4dfcc041fa18cee1832c1cbc6da6e54e247e756ad",
+      "integrity": "sha256:30c095906e92e601f18027a4dfcc041fa18cee1832c1cbc6da6e54e247e756ad"
+    },
+    "ghcr.io/postfinance/devcontainer-features/docker-out:1.1.0": {
+      "version": "1.1.0",
+      "resolved": "ghcr.io/postfinance/devcontainer-features/docker-out@sha256:3381ec689dc586fc3ba64df5bd5949f43669e2eef40b1f47fcf5eb638ebed1d3",
+      "integrity": "sha256:3381ec689dc586fc3ba64df5bd5949f43669e2eef40b1f47fcf5eb638ebed1d3"
+    }
+  }
+}

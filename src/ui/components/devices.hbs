@@ -1,0 +1,18 @@
+<fieldset class="fieldset" id="devices">
+	<legend class="fieldset-legend">Devices</legend>
+	<div class="flex">
+		{{#each devices as |device|}}
+		<div class="tooltip tooltip-bottom grow flex">
+			<div class="tooltip-content">
+				<code>{{device.address}}</code>
+			</div>
+			<input
+				type="checkbox"
+				name="device-buttons"
+				class="btn m-1 grow"
+				aria-label="{{device.name}}"
+				value="{{device.name}}" />
+		</div>
+		{{/each}}
+	</div>
+</fieldset>

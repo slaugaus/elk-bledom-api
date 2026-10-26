@@ -1,0 +1,20 @@
+<section class="hero bg-base-300 min-h-screen">
+	<div class="hero-content">
+		<div class="card bg-base-100 shadow-2xl">
+			<div class="card-body">
+				{{> devices}} {{> power}}
+				<fieldset class="fieldset" id="color-brightness">
+					{{> color}} {{> brightness}}
+					<button
+						type="button"
+						class="btn"
+						hx-post="/api/echo"
+						hx-include="#color-brightness">
+						Set Color &amp; Brightness
+					</button>
+				</fieldset>
+				<button type="button" class="btn" hx-get="/api/ping">Ping?</button>
+			</div>
+		</div>
+	</div>
+</section>

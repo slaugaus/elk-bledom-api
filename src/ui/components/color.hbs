@@ -1,0 +1,19 @@
+<fieldset class="fieldset" id="color">
+	<legend class="fieldset-legend">Color</legend>
+	{{! <input type="text" name="color" id="color" /> }}
+	<div id="coloris" class="m-2"></div>
+	<button type="button" class="btn">Set</button>
+</fieldset>
+
+<script defer>
+	Coloris({
+		parent: "#coloris",
+		el: "#coloris",
+		alpha: false,
+		theme: "pill",
+		themeMode: "auto",
+		inline: true,
+		defaultColor: "#FFFFFF",
+		wrap: false,
+	});
+</script>

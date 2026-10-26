@@ -1,0 +1,141 @@
+openapi: 3.0.4
+info:
+  title: ELK-BLEDOM API
+  version: 1.0.0
+paths:
+  /api/leds/on:
+    post:
+      tags:
+        - LED Strip
+      summary: Turn on LED strips
+      description: Turn on LED strips
+      operationId: powerOn
+      parameters:
+        - name: strip
+          description: LED strip name(s) to turn on; omit for all
+          in: query
+          style: form
+          explode: true
+          required: false
+          schema:
+            $ref: "#/components/schemas/LEDStrips"
+      responses:
+        "200":
+          description: Successful
+        "400":
+          description: Bad request
+
+  /api/leds/off:
+    post:
+      tags:
+        - LED Strip
+      summary: Turn off LED strips
+      description: Turn off LED strips
+      operationId: powerOff
+      parameters:
+        - name: strip
+          description: LED strip name(s) to turn off; omit for all
+          in: query
+          style: form
+          explode: true
+          required: false
+          schema:
+            $ref: "#/components/schemas/LEDStrips"
+      responses:
+        "200":
+          description: Successful
+        "400":
+          description: Bad request
+
+  /api/leds/color:
+    post:
+      tags:
+        - LED Strip
+      summary: Set LED strip colors
+      description: Set LED strip colors
+      operationId: color
+      parameters:
+        - name: strip
+          description: LED strip name(s) to turn off; omit for all
+          in: query
+          style: form
+          explode: true
+          required: false
+          schema:
+            $ref: "#/components/schemas/LEDStrips"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LEDColor"
+      responses:
+        "200":
+          description: Successful
+        "400":
+          description: Bad request
+
+  /api/leds/brightness:
+    post:
+      tags:
+        - LED Strip
+      summary: Set LED strip brightnesses
+      description: Set LED strip brightnesses
+      operationId: brightness
+      parameters:
+        - name: strip
+          description: LED strip name(s) to turn off; omit for all
+          in: query
+          style: form
+          explode: true
+          required: false
+          schema:
+            $ref: "#/components/schemas/LEDStrips"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LEDBrightness"
+      responses:
+        "200":
+          description: Successful
+        "400":
+          description: Bad request
+
+components:
+  schemas:
+    LEDStrips:
+      type: array
+      items:
+        type: string
+        example: "Desk"
+
+    LEDColor:
+      required:
+        - color
+      type: object
+      properties:
+        color:
+          type: string
+          example: "#FF0000"
+
+    LEDBrightness:
+      required:
+        - brightness
+      type: object
+      properties:
+        brightness:
+          type: number
+          example: 100
+
+    LEDState:
+      required:
+        - brightness
+        - color
+      type: object
+      properties:
+        brightness:
+          type: number
+          example: 50
+        color:
+          type: string
+          example: "#00FF00"
